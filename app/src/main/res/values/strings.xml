@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">JobIntentServiceTest</string>
+    <string name="text_start_service_label">Start Service</string>
+</resources>
