@@ -8,14 +8,14 @@ import com.example.jobintentservicetest.TestDataClass
 
 abstract class BaseCrashJobService : JobIntentService() {
     override fun onHandleWork(intent: Intent) {
-        val dataClass = intent
-            .takeIf { intent.hasExtra(TEST_DATA) }
-            ?.getParcelableExtra<TestDataClass>(TEST_DATA)
+        val dataId = intent
+            .takeIf { intent.hasExtra(DATA_ID_EXTRA) }
+            ?.getIntExtra(DATA_ID_EXTRA, -1)
 
-        if (dataClass != null) {
-            Log.d(this::class.java.canonicalName, "Obtained Data Class")
+        if (dataId != null && dataId != -1) {
+            Log.d(this::class.java.canonicalName, "Obtained Data Id")
         } else {
-            Log.d(this::class.java.canonicalName, "Didn't Obtained Data Class")
+            Log.d(this::class.java.canonicalName, "Didn't Obtained Data Id")
         }
 
         try {
@@ -26,7 +26,7 @@ abstract class BaseCrashJobService : JobIntentService() {
     }
 
     companion object {
-        private const val TEST_DATA = "TEST_DATA"
+        private const val DATA_ID_EXTRA = "DATA_ID_EXTRA"
 
         fun <T : BaseCrashJobService> startTestService(
             context: Context,
@@ -35,7 +35,7 @@ abstract class BaseCrashJobService : JobIntentService() {
             jobId: Int
         ) {
             val intent = Intent(context, jobClass)
-            intent.putExtra(TEST_DATA, data)
+            intent.putExtra(DATA_ID_EXTRA, data.randomId)
 
             enqueueWork(context, jobClass, jobId, intent)
         }
