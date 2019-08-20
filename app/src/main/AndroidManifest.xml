@@ -16,8 +16,26 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <service android:name=".TestJobService"
+        <service android:name=".testjobs.TestJobService"
                  android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name=".testjobs.TestJobService2"
+                android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name=".testjobs.TestJobService3"
+                android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name=".testjobs.TestJobService4"
+                android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name=".testjobs.TestJobService5"
+                android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name=".testjobs.TestJobService6"
+                android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name=".testjobs.TestJobService7"
+                android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name=".testjobs.TestJobService8"
+                android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name=".testjobs.TestJobService9"
+                android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name=".testjobs.TestJobService10"
+                android:permission="android.permission.BIND_JOB_SERVICE"/>
         <receiver android:name=".TestAlarmReceiver"/>
     </application>
 
