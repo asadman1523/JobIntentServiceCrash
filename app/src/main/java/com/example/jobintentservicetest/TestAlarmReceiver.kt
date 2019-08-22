@@ -45,6 +45,30 @@ class TestAlarmReceiver : BroadcastReceiver() {
                 context,
                 TestDataClass("changos", Random.nextInt(10000))
             )
+            TestJobService10.startTestService(
+                context,
+                TestDataClass("changos", Random.nextInt(10000))
+            )
+            TestJobService11.startTestService(
+                context,
+                TestDataClass("changos", Random.nextInt(10000))
+            )
+            TestJobService12.startTestService(
+                context,
+                TestDataClass("changos", Random.nextInt(10000))
+            )
+            TestJobService13.startTestService(
+                context,
+                TestDataClass("changos", Random.nextInt(10000))
+            )
+            TestJobService14.startTestService(
+                context,
+                TestDataClass("changos", Random.nextInt(10000))
+            )
+            TestJobService15.startTestService(
+                context,
+                TestDataClass("changos", Random.nextInt(10000))
+            )
 
         }
     }
